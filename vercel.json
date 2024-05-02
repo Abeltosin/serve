@@ -4,12 +4,12 @@
     {
       "src": "server.js",
       "use": "@vercel/node",
-      "config": "db.json" // Include db.json in the build
+      "config": "db.json"
     }
   ],
   "routes": [
     {
-      "src": "/api/users", // Matches all API endpoints
+      "src": "/api/users", 
       "dest": "server.js"
     }
   ]
