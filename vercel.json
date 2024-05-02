@@ -1,16 +1,16 @@
 {
-    "version": 2,
-    "builds": [
-      {
-        "src": "index.js",
-        "use": "@vercel/node"
-      }
-    ],
-    "routes": [
-      {
-        "src": "/api/users",
-        "dest": "index.js"
-      }
-    ]
-  }
-  
+  "version": 2,
+  "builds": [
+    {
+      "src": "server.js",
+      "use": "@vercel/node",
+      "config": "db.json" // Include db.json in the build
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/users", // Matches all API endpoints
+      "dest": "server.js"
+    }
+  ]
+}
