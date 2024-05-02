@@ -1,1 +1,17 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "server.js",
+      "use": "@vercel/node",
+      "config": "db.json" // Include db.json in the build
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)", // Matches all API endpoints
+      "dest": "server.js"
+    }
+  ]
+}
 
